@@ -1,0 +1,499 @@
+%#% extstart input preamble.tex
+%
+% memman.tex  Memoir class user manual (Part II only)  last updated 2009/09/07
+%             Author: Peter Wilson
+%             Copyright 2001, 2002, 2003, 2004, 2008, 2009 Peter R. wilson
+%
+%\listfiles
+\documentclass[10pt,letterpaper,extrafontsizes]{memoir}
+\listfiles
+\usepackage{comment}
+
+\newcommand\en[1]{#1}
+%\newcommand\en[1]{}
+%\newcommand\zhcn[1]{#1}
+\newcommand\zhcn[1]{}
+%\newcommand\zhtw[1]{#1}
+\newcommand\doczhcn[1]{#1}
+%\newcommand\doczhcn[1]{}
+
+% author, place, time
+\newcommand\myprefaceauthor[3]{
+  \vspace{\baselineskip}
+  \begin{flushright}
+    %\noindent #2, #3 \hfill \right \textsc{#1}
+    \noindent #2, #3 \hfill \right #1
+  \end{flushright}
+}
+
+% content, source|author
+\newcommand\prologue[2]{
+  \begin{center}
+    \noindent \textit{#1}
+  \end{center}
+  \ifx&#2&%
+    % #2 is empty
+  \else
+    % #2 is nonempty
+    \begin{flushright}
+      \hfill \textsc{#2} \\
+    \end{flushright}
+  \fi
+  \vspace{\baselineskip}
+}
+
+\newcommand\prologueb[2]{
+  \begin{chapterquote}
+    \textit{#1}
+  \end{chapterquote}
+  \begin{flushright}
+    %\noindent \hfill \textsc{#2}
+  \hfill \source{#2}
+  \end{flushright}
+}
+
+\newcommand{\doccopyright}{Visit \url{http://code.google.com/p/chinese-texts} to get the latest version.}
+
+%\copyrightline{Visit \url{http://code.google.com/p/chinese-texts} to get the latest version.}
+
+\en{
+  \newcommand{\doctitle}{The Spirit of the Chinese People}
+  \newcommand{\docauthor}{Ku Hung-Ming} %{Thomson Ku}
+  \newcommand{\dockeywords}{Chinese, Spirit}
+  \newcommand{\docsubject}{}
+  \newcommand{\docmaintainer}{}
+}
+\zhcn{
+  \newcommand{\doctitle}{春秋大義}
+  \newcommand{\docauthor}{辜鴻銘}
+  \newcommand{\dockeywords}{中國人, 精神}
+  \newcommand{\docsubject}{中國人的精神}
+  \newcommand{\docmaintainer}{}
+}
+
+\usepackage{ifthen}
+\usepackage{ifpdf}
+\usepackage{ifxetex}
+\usepackage{ifluatex}
+
+% For (non-printing) notes  \PWnote{date}{text}
+\newcommand{\PWnote}[2]{} 
+\PWnote{2012/08/19}{Made a memoir class for the book}
+
+% same
+\newcommand{\LMnote}[2]{} 
+
+
+\usepackage{memsty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{titlepages}  % code of the example titlepages
+\usepackage{memlays}     % extra layout diagrams
+\usepackage{dpfloat}     % floats on facing pages
+%\usepackage{fonttable}[2009/04/01]   % font tables
+%%%%\usepackage{xr-hyper} \externaldocument{memdesign} Doesn't work, 
+%%%%                      Idea won't work in general for memman/memdesin
+%%%%                      as at display time, who knows where everything
+%%%%                      will be located on the individual's computer.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% Change section heading styles
+%%%\memmansecheads
+
+%%%% Use the built-in division styling
+\headstyles{memman}
+
+%%% ToC down to subsections
+\settocdepth{subsection}
+%%% Numbering down to subsections as well
+\setsecnumdepth{subsection}
+
+%%%% extra index for first lines
+\makeindex[lines]
+
+% this 'if' is used to determine whether we are compiling the memoir
+% master in the subversion repository, or the public memman.tex
+\newif\ifMASTER
+\MASTERfalse
+%\MASTERtrue
+
+\ifMASTER
+
+% add patch to fink, such that \AtEndFile still work
+\makeatletter
+\AtEndFile{fink.sty}{
+  \typeout{patching fink} 
+  \renewcommand{\InputIfFileExists}[2]{%
+    \IfFileExists{##1}%
+    {##2\@addtofilelist{##1}%
+      \m@matbeginf{##1}%
+      \fink@prepare{##1}%
+      %\@@input \@filef@und
+      \expandafter\fink@input%
+      \expandafter\fink@restore\expandafter{\finkpath}%
+     \m@matendf{##1}%
+     \killm@matf{##1}}%
+ }
+}
+\makeatother
+% private package, not in circulation
+% enables us to gather svn information on a single file basis
+%\usepackage[filehooks]{svn-multi-private}
+% use the current version
+\usepackage[filehooks]{svn-multi}
+
+
+% \svnidlong
+% {}
+% {$LastChangedDate: 2011-01-23 22:13:38 +0100 (Sun, 23 Jan 2011) $}
+% {$LastChangedRevision: 332 $}
+% {$LastChangedBy: daleif $}
+
+\makeatletter
+\newcommand\addRevisionData{%
+  \begin{picture}(0,0)%
+    \put(0,-20){%
+      \tiny%
+      \expandafter\@ifmtarg\expandafter{\svnfiledate}{}{%
+        \textit{\textcolor{darkgray}{Chapter last updated \svnfileyear/\svnfilemonth/\svnfileday
+         \enspace (revision \svnfilerev)}}
+     }%
+    }%
+  \end{picture}%
+}
+\makeatother
+
+% we add this to the first page of each chapter
+
+\makepagestyle{chapter}
+\makeoddfoot{chapter}{\addRevisionData}{\thepage}{}
+\makeevenfoot{chapter}{\addRevisionData}{\thepage}{}
+
+\else
+% disable svn info collecting
+\newcommand\svnidlong[4]{}
+\fi
+
+\doczhcn{
+  \newcommand\mycjkmainfont{AR PL UMing CN}%{仿宋}%{宋體}%{新宋體}%{文鼎ＰＬ新宋}%
+  \newcommand\mycjkmonofont{WenQuanYi Micro Hei Mono}%{AR PL UMing CN}
+  \newcommand\mycjkboldfont{WenQuanYi Micro Hei}%{AR PL UKai CN}%{YaHei Consolas Hybrid}%{黑體}%{標楷體}
+
+  \ifxetex    % xelatex
+
+    \usepackage[
+        BoldFont, % 允許粗體
+        SlantFont,        % 允許斜體
+        CJKsetspaces,
+        CJKchecksingle
+        ]{xeCJK}
+    \defaultfontfeatures{Mapping=tex-text} %如果沒有它，會有一些 tex 特殊字符無法正常使用，比如連字符。
+
+    \XeTeXlinebreaklocale "zh"                      % 重要，使得中文可以正確斷行！
+    \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt  %
+
+    %% chinese setup
+    \usepackage[cm-default]{fontspec} % XeLaTex 配合 fontspec 可以非常方便地設置字體。[cm-default]選項主要用來解決使用數學環境時數學符號不能正常顯示的問題
+    %\usepackage{xltxtra,xunicode} %這行和上行 \usepackage[cm-default]{fontspec} 解決公式不正常的問題.但是打開後有些如 itemize 的點不能顯示。
+
+    \setCJKmainfont[BoldFont=\mycjkboldfont]{\mycjkmainfont}
+    %\setCJKmainfont{\mycjkmainfont}
+    \setCJKmonofont{\mycjkmonofont}
+
+    \setmainfont{Times New Roman}
+    \setsansfont{DejaVu Sans}
+    \setmonofont{FreeMono}%{Latin Modern Mono}
+    %\setsansfont{[foo.ttf]}                          % 直接使用当前目录下的字体文件
+
+  \fi
+  %\input{cndoc.tex}
+}
+
+%% end preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%#% extend
+
+
+\begin{document}
+
+%#% extstart input intro.tex
+
+
+\tightlists
+%%%%\firmlists
+\midsloppy
+\raggedbottom
+\chapterstyle{demo3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{memnoidxnum}
+
+\date{}
+\author{\docauthor}
+\title{\doctitle}
+%\subtitle{\docsubject}
+%\maketitle
+
+\frontmatter
+\pagestyle{empty}
+
+
+% title page
+\vspace*{\fill}
+
+\begin{center}
+  \HUGE\textsc{義 ~ 大 ~ 秋 ~ 春}\par
+
+\vspace*{\fill}
+
+  %\HUGE\textsf{\doctitle}\par
+  \Large{THE} \\
+  \HUGE\textsc{SPIRIT OF THE CHINESE PEOPLE}
+
+\vspace*{\fill}
+
+  \Large\textsc{WITH AN ESSAY}\par
+
+  \Large{ON}\par
+
+  \LARGE{``The War and the Way out''}\par
+
+  \Large{BY}\par
+
+  \medskip
+
+  \LARGE\textsc{KU HUNG-MING, M.A. (Edin.)} \par
+
+\end{center}
+
+
+\vspace*{\fill}
+
+\begin{center}
+  Es giebt zwei friedliche Gewalten: \par
+  das Recht und die Schicklichkeit. \par
+  \hfill \textsc{Goethe} \par
+\end{center}
+
+\vspace*{\fill}
+\newcommand*{\THPress}{THE PEKING DAILY NEWS}%
+\begin{center}
+  \LARGE\textsc{PEKING}\par
+  \settowidth{\droptitle}{\textsf{\THPress}}%
+  \textsf{\THPress} \\[0.2\baselineskip]
+  %\includegraphics[width=\droptitle]{anvil2.mps}
+  \setlength{\droptitle}{0pt}%
+
+  \LARGE\textsc{1915}\par
+
+\end{center}
+\clearpage
+
+% copyright page
+\begingroup
+\footnotesize
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+%%\ttfamily
+\textcopyright{} 2001 --- 2011 \doccopyright \\
+All rights reserved
+
+%The XXX Press, Street, WA.
+
+Printed in the World 
+
+\vfil
+
+\begin{center}
+10 09 08 07 06 05 04 03 02 01\hspace{2em}19 18 17 16 15 14 13
+\end{center}
+\begin{center}
+\begin{tabular}{ll}
+First edition:                        & 31 August 2012 \\
+\end{tabular}
+\end{center}
+\ifMASTER
+Manual last changed \svnyear/\svnmonth/\svnday
+\fi
+
+\endgroup
+\clearpage
+
+
+\vspace*{\fill}
+
+\begin{center}
+  \HUGE\textsc{DEDICATED}\par
+
+\vspace*{\fill}
+
+  \Large{TO} \par
+
+\vspace*{\fill}
+
+  \HUGE\textsf{L. SOYKA, ESQUIRE,}
+
+  \medskip
+
+  \LARGE{AN AUSTRIAN GENTLEMAN,} \par
+
+\vspace*{\fill}
+
+  \Large{AS} \par
+
+\vspace*{\fill}
+
+  \LARGE{A Token of Gratitude} \par
+
+\vspace*{\fill}
+
+  \Large{FOR} \par
+
+\vspace*{\fill}
+
+  \LARGE{His chivalrous and great kindness to me} \par
+
+  \medskip
+
+  \LARGE{and my family during the Revolution} \par
+
+  \medskip
+
+  \LARGE{in} \par
+
+  \medskip
+
+  \LARGE{China in 1911.} \par
+
+  \medskip
+
+\end{center}
+
+
+\clearpage
+
+
+% ToC, etc
+%%%\pagenumbering{roman}
+\pagestyle{headings}
+%%%%\pagestyle{Ruled}
+
+\setupshorttoc
+\tableofcontents
+\clearpage
+\setupparasubsecs
+\setupmaintoc
+\tableofcontents
+%\setlength{\unitlength}{1pt}
+%\clearpage
+%\listoffigures
+%\clearpage
+%\listoftables
+%\clearpage
+%\listofegresults
+
+%#% extend
+
+
+%#% extstart include preface.tex
+%\chapter{Foreword}
+
+\svnidlong
+{$Ignore: $}
+{$LastChangedDate: 2010-05-13 17:10:00 +0200 (Thu, 13 May 2010) $}
+{$LastChangedRevision: 210 $}
+{$LastChangedBy: daleif $}
+
+
+%\chapter{Foreword}
+%\input{../chapters/chap-foreword}
+
+\chapter{Preface}
+\input{../chapters/chap-preface}
+
+\chapter{Introduction}
+\input{../chapters/chap-intro}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Remarks to the user}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\chapter{Terminology}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%#% extend
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+% body
+\mainmatter
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%\part{Practice} \label{part:practice}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%#% extstart include start-off.tex
+
+
+\svnidlong
+{$Ignore: $}
+{$LastChangedDate: 2010-07-15 22:37:02 +0200 (Thu, 15 Jul 2010) $}
+{$LastChangedRevision: 256 $}
+{$LastChangedBy: daleif $}
+
+\input{../chapters/chap-spirit}
+
+\input{../chapters/chap-woman}
+
+\input{../chapters/chap-lang}
+
+\input{../chapters/chap-john}
+
+\input{../chapters/chap-sinologue}
+
+\input{../chapters/chap-scholarship1}
+
+\input{../chapters/chap-scholarship2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% appendices
+\appendix
+\appendixpage*
+%%\pagestyle{ruled}
+
+%%\chapterstyle{normal}
+%%\chapterstyle{section}
+%%\chapterstyle{demo3}
+
+%#% extstart include packages-and-maros.tex
+
+\svnidlong
+{$Ignore: $}
+{$LastChangedDate: 2010-05-13 17:10:00 +0200 (Thu, 13 May 2010) $}
+{$LastChangedRevision: 210 $}
+{$LastChangedBy: daleif $}
+
+
+\input{../chapters/chap-apnd1}
+
+\input{../chapters/chap-apnd2}
+
+%\input{../chapters/chap-apndhow}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\endinput
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% end mbooka
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% back end
+\backmatter
+
+\end{document}
+
+\endinput

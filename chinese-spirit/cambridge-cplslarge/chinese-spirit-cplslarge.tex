@@ -1,0 +1,158 @@
+%This is file sample.tex
+\documentclass{cplslarge}%
+
+\newcommand\en[1]{#1}
+%\newcommand\en[1]{}
+%\newcommand\zhcn[1]{#1}
+\newcommand\zhcn[1]{}
+%\newcommand\zhtw[1]{#1}
+\newcommand\doczhcn[1]{#1}
+%\newcommand\doczhcn[1]{}
+
+% author, place, time
+\newcommand\myprefaceauthor[3]{
+  \vspace{\baselineskip}
+  \begin{flushright}
+    %\noindent #2, #3 \hfill \right \textsc{#1}
+    \noindent #2, #3 \hfill \right #1
+  \end{flushright}
+}
+
+% content, source|author
+\newcommand\prologue[2]{
+  \begin{center}
+    \noindent \textit{#1}
+  \end{center}
+  \ifx&#2&%
+    % #2 is empty
+  \else
+    % #2 is nonempty
+    \begin{flushright}
+      \hfill \textsc{#2} \\
+    \end{flushright}
+  \fi
+  \vspace{\baselineskip}
+}
+
+\newcommand\prologueb[2]{
+  \begin{chapterquote}
+    \textit{#1}
+  \end{chapterquote}
+  \begin{flushright}
+    %\noindent \hfill \textsc{#2}
+  \hfill \source{#2}
+  \end{flushright}
+}
+
+%\copyrightline{\url{http://code.google.com/p/chinese-texts}}
+
+\en{
+  \newcommand{\doctitle}{The Spirit of the Chinese People}
+  \newcommand{\docauthor}{Ku Hung-Ming} %{Thomson Ku}
+  \newcommand{\dockeywords}{Chinese, Spirit}
+  \newcommand{\docsubject}{}
+}
+\zhcn{
+  \newcommand{\doctitle}{春秋大義}
+  \newcommand{\docauthor}{辜鴻銘}
+  \newcommand{\dockeywords}{中國人, 精神}
+  \newcommand{\docsubject}{中國人的精神}
+}
+
+\doczhcn{
+
+  \newcommand\mycjkmainfont{AR PL UMing CN}%{仿宋}%{宋體}%{新宋體}%{文鼎ＰＬ新宋}%
+  \newcommand\mycjkmonofont{WenQuanYi Micro Hei Mono}%{AR PL UMing CN}
+  \newcommand\mycjkboldfont{WenQuanYi Micro Hei}%{AR PL UKai CN}%{YaHei Consolas Hybrid}%{黑體}%{標楷體}
+
+  \ifxetex    % xelatex
+
+    \usepackage[
+        BoldFont, % 允許粗體
+        SlantFont,        % 允許斜體
+        CJKsetspaces,
+        CJKchecksingle
+        ]{xeCJK}
+    \defaultfontfeatures{Mapping=tex-text} %如果沒有它，會有一些 tex 特殊字符無法正常使用，比如連字符。
+
+    \XeTeXlinebreaklocale "zh"                      % 重要，使得中文可以正確斷行！
+    \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt  %
+
+    %% chinese setup
+    \usepackage[cm-default]{fontspec} % XeLaTex 配合 fontspec 可以非常方便地設置字體。[cm-default]選項主要用來解決使用數學環境時數學符號不能正常顯示的問題
+    %\usepackage{xltxtra,xunicode} %這行和上行 \usepackage[cm-default]{fontspec} 解決公式不正常的問題.但是打開後有些如 itemize 的點不能顯示。
+
+    \setCJKmainfont[BoldFont=\mycjkboldfont]{\mycjkmainfont}
+    %\setCJKmainfont{\mycjkmainfont}
+    \setCJKmonofont{\mycjkmonofont}
+
+    \setmainfont{Times New Roman}
+    \setsansfont{DejaVu Sans}
+    \setmonofont{FreeMono}%{Latin Modern Mono}
+    %\setsansfont{[foo.ttf]}                          % 直接使用当前目录下的字体文件
+
+  \fi
+  %\input{cndoc.tex}
+}
+
+
+%For reference style
+\usepackage[authoryear]{natbib}
+% For index
+\usepackage{makeidx}
+\makeindex
+
+\begin{document}
+\frontmatter
+
+  \title[\docsubject]{\doctitle}
+  \author{\docauthor}
+
+  \maketitle
+  \tableofcontents
+  \listoffigures
+  \listoftables
+%  \listofcontributors
+  \editedlistofcontributors
+  \printphotogallery
+
+  %\begin{acknowledgment}
+    %\chapter*{Acknowledgments}
+    %\include{acknow}
+  %\end{acknowledgment}
+
+  \begin{foreword}
+    \chapter*{Foreword}
+    \input{../chapters/chap-foreword}
+  \end{foreword}
+
+  \begin{foreword}
+    \chapter*{Preface}
+    \input{../chapters/chap-preface}
+  \end{foreword}
+
+\mainmatter
+  %\part{Getting Started}
+    \input{../chapters/chap-intro}
+    \input{../chapters/chap-spirit}
+    \input{../chapters/chap-woman}
+    \input{../chapters/chap-lang}
+    \input{../chapters/chap-john}
+    \input{../chapters/chap-sinologue}
+    \input{../chapters/chap-scholarship1}
+    \input{../chapters/chap-scholarship2}
+
+\backmatter
+  \appendix
+    \input{../chapters/chap-apnd1}
+    \input{../chapters/chap-apnd2}
+    \input{../chapters/chap-apndhow}
+  \endappendix
+
+%\renewcommand{\refname}{Bibliography}% if you prefer this heading
+\bibliography{cplslargesample}\label{refs}
+\bibliographystyle{cambridgeauthordate}
+ \printindex
+
+\end{document}
+

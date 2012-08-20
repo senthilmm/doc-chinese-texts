@@ -1,0 +1,236 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Title:             esifig2.ps
+%%Creator: Ghostscript ps2epsi from fig-2.eps
+%%CreationDate: Mar 16 16:17
+%%For:sankaran sankaran
+%%Pages: 1
+%%DocumentFonts:
+%%BoundingBox: 109 47 251 114
+%%BeginPreview: 143 66 1 66
+% 000002000000000010000000000080000000
+% 000003c0000000001e0000000000f0000000
+% 000003f8000000001fc000000000fe000000
+% fffffffffffffffffffffffffffffffffff8
+% 000003c0000000001e0000000000f0000000
+% 000002000000000010000000000080000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000000000000000000000000000000
+% 000000000000000000000000000000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000000000000000000000000000000
+% 000000000000000000000000000000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000000000000000000000000000000
+% 000000000000000000000000000000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000000000000000000000000000000
+% 000000000000000000000000000000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000000000000000000000000000000
+% 000000000000000000000000000000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000000000000000000000000000000
+% 000000000000000000000000000000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000000000000000000000000000000
+% 000000000000000000000000000000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000000000000000000000000000000
+% 000000000000000000000000000000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000000000000000000000000000000
+% 000000000000000000000000000000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000000000000000000000000000000
+% 000000000000000000000000000000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000080000000000000080000000000
+% 000000000000000000000000000000000000
+% 000002000000000010000000000080000000
+% 000003c0008000001e0000000800f0000000
+% 000003f8008000001fc000000800fe000000
+% fffffffffffffffffffffffffffffffffff8
+% 000003c0000000001e0000000000f0000000
+% 000002000000000010000000000080000000
+%%EndImage
+%%EndPreview
+save
+countdictstack
+mark
+newpath
+/showpage {} def
+%%EndProlog
+%%Page 1 1
+
+%%For:rsanka rsanka
+%%DocumentFonts:
+save
+countdictstack
+mark
+newpath
+/showpage {} def
+%%Page 1 1
+%%Created by:        scr2ps
+
+gsave
+
+
+%% arrow library
+
+/arrowdict 17 dict def      % arguments:   tailx taily tipx tipy mapsto
+arrowdict /amtrx matrix put %       make mapsto = 1 for a `mapsto tail`
+                            %                   = 0 for nothing on tail
+                            %                   = 2 for two headed arrow
+/setarrow {arrowdict begin /tailhalfwidth exch def
+                           /headhalfwidth exch def
+                           /headlength exch def end} bind def
+/setarrowmode {arrowdict begin /mapsto exch def end} bind def
+
+/arrowhead
+ {arrowdict begin
+   /angle exch def
+   /savematrix amtrx currentmatrix def
+   strans
+   angle rotate
+   newpath headlength -.4 mul headhalfwidth moveto
+   headlength -.4 mul headhalfwidth neg lineto
+   headlength .6 mul 0 lineto
+   closepath fill
+   savematrix setmatrix
+   end
+}def
+
+/arrow
+ {arrowdict begin
+   /tipy exch def                     /tipx exch def
+   /taily exch def                    /tailx exch def
+   /dx tipx tailx sub xscale mul def  /dy tipy taily sub yscale mul def
+   /arrowlength dx dx mul dy dy mul add sqrt def
+   /angle dy dx atan def
+   /base arrowlength headlength sub def
+   /savematrix amtrx currentmatrix def
+   tailx taily strans
+   angle rotate
+   mapsto 1  eq
+      {np 0  tailhalfwidth neg  mt
+          0  tailhalfwidth  ls} if
+   mapsto 2  eq
+      {np headlength  headhalfwidth neg  mt
+          headlength  headhalfwidth  li
+           0               0         li
+           closepath                 fill} if
+
+   np base 0                mt
+   base headhalfwidth neg   li
+   arrowlength 0            li
+   base headhalfwidth       li
+   closepath  fill
+   np base 0                mt
+   0 0                      ls
+   savematrix setmatrix
+   end
+}def
+
+%% arrow initialization 
+
+     6 1.5 3 setarrow
+     0 setarrowmode
+
+
+%%  scr2ps dictionary
+
+/scr2psDict 30 dict def
+scr2psDict begin
+  /iscp false def 
+  {pop pop /iscp true def} {pop pop} {pop pop pop pop pop pop} {} pathforall
+  iscp {currentpoint translate} if
+  /np    {newpath} bind def
+  /mt    {moveto}  bind def
+  /li    {lineto}  bind def
+  /ls    {lineto stroke} bind def
+  /setxscale {/xscale exch def} bind def
+  /setyscale {/yscale exch def} bind def
+  /smt    {yscale mul exch xscale mul exch moveto}  bind def
+  /sli    {yscale mul exch xscale mul exch lineto}  bind def
+  /sls    {yscale mul exch xscale mul exch lineto stroke} bind def
+  /strans {yscale mul exch xscale mul exch translate}  bind def
+  /sct    {yscale mul /y3 exch def
+           xscale mul /x3 exch def
+           yscale mul /y2 exch def
+           xscale mul /x2 exch def
+           yscale mul exch xscale mul exch x2 y2 x3 y3 curveto} bind def
+  /setpsfont {exch findfont exch scalefont setfont} bind def
+  /stringsize {/temp exch def gsave newpath 0 0 moveto
+               temp true charpath flattenpath pathbbox
+               /strh exch def /strw exch def pop  pop grestore} bind def
+
+1  setxscale
+1  setyscale
+
+np   -1.0   -1.0  mt  361.0   -1.0 li  361.0  145.0 li   -1.0  145.0 li closepath clip
+       0.0      0.0 translate
+
+      0.0 setlinewidth
+
+%%  translate user coordinate system
+    180.000      80.000 strans
+
+      0.8 setlinewidth
+
+     7.0  2.5  0.0 setarrow
+
+%% draw line
+    np    -70.000     -30.000  smt      70.000     -30.000  sls
+
+%% draw line
+    np    -70.000      30.000  smt      70.000      30.000  sls
+
+      0.000    -30.000   0.0 arrowhead
+      0.000     30.000   0.0 arrowhead
+    -45.000    -30.000   0.0 arrowhead
+     45.000    -30.000   0.0 arrowhead
+    -45.000     30.000   0.0 arrowhead
+     45.000     30.000   0.0 arrowhead
+    [2 3]  0.0 setdash
+
+%% draw line
+    np    -30.000     -30.000  smt     -30.000      30.000  sls
+
+%% draw line
+    np     30.000     -30.000  smt      30.000      30.000  sls
+
+    [] 0 setdash
+
+
+
+end 
+grestore
+cleartomark
+countdictstack exch sub { end } repeat
+restore
+%%Trailer
+cleartomark
+countdictstack exch sub { end } repeat
+restore
+%%EOF

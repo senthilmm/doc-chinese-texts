@@ -1,0 +1,279 @@
+This is XeTeX, Version 3.1415926-2.2-0.9995.2 (TeX Live 2009/Debian) (format=xelatex 2012.2.11)  22 AUG 2012 13:28
+entering extended mode
+ %&-line parsing enabled.
+**memoir.ins
+(./memoir.ins
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/docstrip.tex
+\blockLevel=\count80
+\emptyLines=\count81
+\processedLines=\count82
+\commentsRemoved=\count83
+\commentsPassed=\count84
+\codeLinesPassed=\count85
+\TotalprocessedLines=\count86
+\TotalcommentsRemoved=\count87
+\TotalcommentsPassed=\count88
+\TotalcodeLinesPassed=\count89
+\NumberOfFiles=\count90
+\inFile=\read1
+\inputcheck=\read2
+\off@0=\count91
+\off@1=\count92
+\off@2=\count93
+\off@3=\count94
+\off@4=\count95
+\off@5=\count96
+\off@6=\count97
+\off@7=\count98
+\off@8=\count99
+\off@9=\count100
+\off@10=\count101
+\off@11=\count102
+\off@12=\count103
+\off@13=\count104
+\off@14=\count105
+\off@15=\count106
+\@maxfiles=\count107
+\@maxoutfiles=\count108
+
+Utility: `docstrip' 2.5d <2005/07/29>
+English documentation    <1999/03/31>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+(./memoir.ins
+*** Generating the LaTeX2e document class files ***
+
+Generating file(s) ./memoir.cls 
+\openout0 = `./memoir.cls'.
+
+
+Processing file memoir.dtx (class) -> memoir.cls
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+*** Generating the LaTeX2e document class option files ***
+
+Generating file(s) ./mem9.clo 
+\openout0 = `./mem9.clo'.
+
+
+Processing file memoir.dtx (9pt) -> mem9.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+
+Generating file(s) ./mem10.clo 
+\openout0 = `./mem10.clo'.
+
+
+Processing file memoir.dtx (10pt) -> mem10.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+
+Generating file(s) ./mem11.clo 
+\openout0 = `./mem11.clo'.
+
+
+Processing file memoir.dtx (11pt) -> mem11.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+
+Generating file(s) ./mem12.clo 
+\openout0 = `./mem12.clo'.
+
+
+Processing file memoir.dtx (12pt) -> mem12.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+
+Generating file(s) ./mem14.clo 
+\openout0 = `./mem14.clo'.
+
+
+Processing file memoir.dtx (14pt) -> mem14.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+
+Generating file(s) ./mem17.clo 
+\openout0 = `./mem17.clo'.
+
+
+Processing file memoir.dtx (17pt) -> mem17.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+
+Generating file(s) ./mem20.clo 
+\openout0 = `./mem20.clo'.
+
+
+Processing file memoir.dtx (20pt) -> mem20.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+
+Generating file(s) ./mem25.clo 
+\openout0 = `./mem25.clo'.
+
+
+Processing file memoir.dtx (25pt) -> mem25.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+
+Generating file(s) ./mem30.clo 
+\openout0 = `./mem30.clo'.
+
+
+Processing file memoir.dtx (30pt) -> mem30.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+
+Generating file(s) ./mem36.clo 
+\openout0 = `./mem36.clo'.
+
+
+Processing file memoir.dtx (36pt) -> mem36.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+
+Generating file(s) ./mem48.clo 
+\openout0 = `./mem48.clo'.
+
+
+Processing file memoir.dtx (48pt) -> mem48.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+
+Generating file(s) ./mem60.clo 
+\openout0 = `./mem60.clo'.
+
+
+Processing file memoir.dtx (60pt) -> mem60.clo
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+*** Generating the MakeIndex configuration files ***
+
+Generating file(s) ./basic.gst 
+\openout0 = `./basic.gst'.
+
+
+Processing file memoir.dtx (gst) -> basic.gst
+File memoir.dtx ended by \endinput.
+Lines  processed: 35080
+Comments removed: 21324
+Comments  passed: 212
+Codelines passed: 13181
+
+***********************************************************
+*
+* To finish the installation you have to move the following
+* files into a directory searched by LaTeX. See the FAQ on
+* CTAN at /help/uk-tex-faq for more on this.
+*
+*   memoir.cls
+*   mem9.clo
+*   mem10.clo
+*   mem11.clo
+*   mem12.clo
+*   mem14.clo
+*   mem17.clo
+*   mem20.clo
+*   mem25.clo
+*   mem30.clo
+*   mem36.clo
+*   mem48.clo
+*   mem60.clo
+*
+*
+* To produce the documented source run the files ending with
+* `.dtx' through LaTeX.
+* For an index process any name.idx file by:
+*     makeindex -s gind.ist name
+* Process any name.glo file by:
+*     makeindex -s gglo.ist -o name.gls name.glo
+*
+* Happy TeXing
+***********************************************************
+)
+Overall statistics:
+Files  processed: 14
+Lines  processed: 491120
+Comments removed: 298536
+Comments  passed: 2968
+Codelines passed: 184534
+ ) ) 
+Here is how much of TeX's memory you used:
+ 430 strings out of 494665
+ 4203 string characters out of 1166477
+ 54719 words of memory out of 3000000
+ 3737 multiletter control sequences out of 15000+50000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 669 hyphenation exceptions out of 8191
+ 18i,0n,18p,273b,148s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+No pages of output.

@@ -1,0 +1,16 @@
+\contentsline {schapter}{Preface}{vii}
+\contentsline {chapter}{Chapter\nobreakspace {}1\unskip \hspace *{1em}Background and Some Concepts}{1}
+\contentsline {section}{\numberline {1.1}Introduction}{1}
+\contentsline {subsection}{\numberline {1.1.1}Elastic and plastic regims}{1}
+\contentsline {subsubsection}{\numberline {1.1.1.1}Elastic deformation}{1}
+\contentsline {subsubsection}{\numberline {1.1.1.2}Atomic forces and elastic properties}{3}
+\contentsline {subsubsection}{\numberline {1.1.1.3}Plastic deformation}{4}
+\contentsline {section}{\numberline {1.2}Friction Mechanisms}{5}
+\contentsline {section}{\numberline {1.3}Griffith Criterion: Role of Surfaces}{6}
+\contentsline {section}{\numberline {1.4}Peierls Stress and Potential}{8}
+\contentsline {chapter}{Appendix\nobreakspace {}A\unskip \hspace *{1em}Dislocation Core and Atomic Force}{11}
+\contentsline {section}{\numberline {A.1}Stacking Faults}{12}
+\contentsline {chapter}{Appendix\nobreakspace {}B\unskip \hspace *{1em}Glissile and Sessile Dislocations}{13}
+\contentsline {section}{\numberline {B.1}Concept of Fractals}{13}
+\contentsline {schapter}{Bibliography}{15}
+\contentsline {schapter}{Index}{17}

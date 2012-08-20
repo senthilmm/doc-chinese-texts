@@ -1,0 +1,211 @@
+\documentclass[11pt,twoside,letterpaper]{book} %% The same for {book}
+
+
+\newcommand\en[1]{#1}
+%\newcommand\en[1]{}
+%\newcommand\zhcn[1]{#1}
+\newcommand\zhcn[1]{}
+%\newcommand\zhtw[1]{#1}
+\newcommand\zhcna[1]{#1}
+
+\newcommand\prologue[2]{
+#1
+\begin{flushright}\noindent
+\hfill {\it #2}\\
+\end{flushright}
+\vspace{\baselineskip}
+}
+
+\newcommand\myprefaceauthor[3]{
+\vspace{\baselineskip}
+\begin{flushright}\noindent
+#2, #3\hfill {\it #1}\\
+\end{flushright}
+}
+
+\en{
+  \newcommand{\doctitle}{The Spirit of the Chinese People}
+  \newcommand{\docauthor}{Thomson Ku}
+  \newcommand{\dockeywords}{Chinese, Spirit}
+  \newcommand{\docsubject}{}
+}
+\zhcn{
+  \newcommand{\doctitle}{春秋大義}
+  \newcommand{\docauthor}{辜鴻銘}
+  \newcommand{\dockeywords}{中國人, 精神}
+  \newcommand{\docsubject}{中國人的精神}
+}
+
+\zhcna{
+
+  \usepackage{ifxetex}
+
+  \newcommand\mycjkmainfont{AR PL UMing CN}%{仿宋}%{宋體}%{新宋體}%{文鼎ＰＬ新宋}%
+  \newcommand\mycjkmonofont{AR PL UMing CN}%{WenQuanYi Micro Hei Mono}
+  \newcommand\mycjkboldfont{WenQuanYi Micro Hei Mono}%{AR PL UKai CN}%{YaHei Consolas Hybrid}%{黑體}%{標楷體}
+
+  \ifxetex    % xelatex
+
+    %% chinese setup
+    \usepackage[cm-default]{fontspec} % XeLaTex 配合 fontspec 可以非常方便地設置字體。[cm-default]選項主要用來解決使用數學環境時數學符號不能正常顯示的問題
+    %\usepackage{xltxtra,xunicode} %這行和上行 \usepackage[cm-default]{fontspec} 解決公式不正常的問題.但是打開後有些如 itemize 的點不能顯示。
+
+%\setmainfont{Consolas}           % 這裏設置英文襯線字體
+%\setmonofont{Consolas}           % 英文等寬字體
+%\setsansfont{Consolas}           % 英文無襯線字體
+
+    \usepackage[BoldFont, % 允許粗體
+        SlantFont,        % 允許斜體
+        CJKsetspaces,
+        CJKchecksingle]{xeCJK}
+    %\defaultfontfeatures{Mapping=tex-text} %如果沒有它，會有一些 tex 特殊字符無法正常使用，比如連字符。
+
+    %\XeTeXlinebreaklocale "zh"                      % 重要，使得中文可以正確斷行！
+    %\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt  %
+
+    %\setCJKmainfont[BoldFont=\mycjkboldfont]{\mycjkmainfont}
+    \setCJKmainfont{\mycjkmainfont}
+    %\setCJKmonofont{\mycjkmonofont}
+  \fi
+  %\input{cndoc.tex}
+}
+
+
+\usepackage{times,fancyhdr}
+\usepackage[dvips]{graphicx}
+
+
+\sloppy
+
+
+%----------- [New Nova Template 7x10 Regular, 8.5 x 5.5] ---------------------
+\setlength{\topmargin}{-0.35in}
+\setlength{\textheight}{8.5in}   % 11.0 - 1.125 - 0.875
+\setlength{\textwidth}{5.5in}    %  8.5 - 1.375 - 1.125
+\setlength{\oddsidemargin}{0.5in}
+\setlength{\evensidemargin}{0.5in}
+\setlength{\headheight}{26pt}
+\setlength{\headsep}{8pt} 
+%-----------------------------------------------------------------------------
+
+
+%[Float at the top formula]
+\makeatletter
+\setlength\@fptop{0\p@}
+\makeatother
+
+
+% [Clears Header Style on the Last Empty Odd pages]
+\makeatletter 
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else% 
+    \hbox{}% 
+    \thispagestyle{empty}%
+    \newpage% 
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi} 
+\makeatother 
+
+
+
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
+
+
+\def\figurename{Figure}
+\makeatletter
+\renewcommand{\fnum@figure}[1]{\figurename~\thefigure.}
+\makeatother
+
+
+\def\tablename{Table}
+\makeatletter
+\renewcommand{\fnum@table}[1]{\tablename~\thetable.}
+\makeatother
+
+
+\begin{document}
+\title{
+{\begin{flushleft}
+\vskip 0.45in
+{\normalsize\bfseries\textit{\doctitle}}
+\end{flushleft}
+\vskip 0.45in
+\bfseries\scshape Chapter Title}}
+\author{\bfseries\itshape \docauthor\thanks{E-mail address: xxxx}\\
+Affiliations}
+\date{}
+\maketitle
+\thispagestyle{empty}
+\setcounter{page}{1}
+% ------- [First Page Running Head] - place it immediately after title! ------
+\thispagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{In: Book Title \\ 
+Editor: Editor Name, pp. {\thepage-\pageref{lastpage-01}}} % needs \label{lastpage-01} on the last page.
+\fancyhead[R]{ISBN 0000000000  \\
+\copyright~2007 Nova Science Publishers, Inc.}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+%------------------------------------------------------------------------------
+
+\vspace{2in}
+
+\noindent \textbf{PACS} 05.45-a, 52.35.Mw, 96.50.Fm.
+\vspace{.08in} \noindent \textbf{Keywords:} Energy of vacuum state.
+
+%% Other situations:
+\noindent \textbf{Key Words}: inflation, cosmological parameters
+\vspace{.08in} \noindent {\textbf AMS Subject Classification:} 53D, 37C, 65P.
+
+
+
+% ------------ [Running Heads - for odd and even pages] - please insert it only on page 2!
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[EC]{Authors}
+\fancyhead[EL,OR]{\thepage}
+\fancyhead[OC]{Article Name}
+\fancyfoot{}
+\renewcommand\headrulewidth{0.5pt} 
+%------------------------------------------------------------------------------
+
+
+
+\raggedbottom                         %%% do NOT increase spaces between
+                                      %%% paragraphs in order to fill always
+                                      %%% the whole page
+%++------------------------------------------------------------------------------
+
+%\begin{theforeword}
+\input{../chapters/chap-foreword}
+%\end{theforeword}
+
+%\begin{thepreface}
+\input{../chapters/chap-preface}
+%\end{thepreface}
+
+
+\input{../chapters/chap-intro}
+
+\input{../chapters/chap-spirit}
+
+\input{../chapters/chap-woman}
+
+\input{../chapters/chap-lang}
+
+\input{../chapters/chap-john}
+
+\input{../chapters/chap-sinologue}
+
+\input{../chapters/chap-scholarship1}
+
+\input{../chapters/chap-scholarship2}
+
+\appendix
+\input{../chapters/chap-apnd1}
+
+\input{../chapters/chap-apnd2}
+
+\input{../chapters/chap-apndhow}
+
+\end{document}

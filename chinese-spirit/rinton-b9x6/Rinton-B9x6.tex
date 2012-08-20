@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Rinton-B9x6.tex  : 7-30-2000
+%% TeX Driver file to use with Rinton-B9x6.cls for books size 
+%% [9'' x 6''] to be published by Rinton Press 
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+
+\documentclass{Rinton-B9x6}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%please do not remove these lines %%%%%%%%%%%%%%%%%%
+\titlepages %please leave this as it is. Pages 1-4 are reserved for publisher.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{dedication}
+%%%%% Please input your dedication data here.%%%%%%%%%%%%%%%%%%%%%
+
+to Rinton Press
+
+\end{dedication}
+
+\begin{preface}
+%% please have your text for preface in a seperate file 
+%% (only the contents of the preface).
+
+\input preface.tex
+
+\end{preface}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Need not the change anything %%%%%%%%%%%%%%%
+\begin{tblofcontents}
+%%%%% Need not to input any data here. 
+%%%%% System will input automatically.
+\end{tblofcontents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{1}
+\input chapter1.tex
+
+\input appendix.tex
+
+\input reference.tex
+\newpage
+
+%\setcounter{page}{15}
+\input index.tex
+
+\end{document}
+

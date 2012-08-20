@@ -1,0 +1,343 @@
+This is XeTeX, Version 3.1415926-2.2-0.9995.2 (TeX Live 2009/Debian) (format=xelatex 2012.2.11)  19 AUG 2012 19:48
+entering extended mode
+ %&-line parsing enabled.
+**Rinton-B9x6
+(./Rinton-B9x6.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(./Rinton-B9x6.cls
+Document Class: Rinton-B9x6 1996/05/26 v1.3r Standard LaTeX document class
+\trimheight=\dimen102
+\trimwidth=\dimen103
+\typeheight=\dimen104
+\normaltextheight=\dimen105
+\normaltextwidth=\dimen106
+\tempdimen=\dimen107
+\tempbox=\box26
+\minute=\count80
+\hour=\count81
+\c@part=\count82
+\c@chapter=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\captionbox=\box27
+
+Warning: psfig.sty could be be found.
+
+
+Warning: epsfsafe.tex could not be found.
+
+
+epsfig.sty inputed...ok
+(/usr/share/texmf-texlive/tex/latex/graphics/epsfig.sty
+
+LaTeX Warning: You have requested document class `Rinton-B9x6',
+               but the document class provides `epsfig'.
+
+Document Class: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: xetex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/xelatex/xetex-def/xetex.def
+File: xetex.def 2009/11/22 v0.94 LaTeX color/graphics driver for XeTeX (RRM/JK)
+
+))
+\Gin@req@height=\dimen108
+\Gin@req@width=\dimen109
+)
+\epsfxsize=\dimen110
+\epsfysize=\dimen111
+)
+
+epsf.sty inputed...ok
+(/usr/share/texmf-texlive/tex/generic/epsf/epsf.sty
+This is `epsf.tex' v2.7.3 <23 July 2005>
+\epsffilein=\read1
+\epsfframemargin=\dimen112
+\epsfframethickness=\dimen113
+\epsfrsize=\dimen114
+\epsftmp=\dimen115
+\epsftsize=\dimen116
+\epsfxsize=\dimen117
+\epsfysize=\dimen118
+\pspoints=\dimen119
+)
+\c@figure=\count89
+\c@table=\count90
+\tabledim=\dimen120
+\c@theorem=\count91
+\c@corollary=\count92
+\c@lemma=\count93
+\c@proposition=\count94
+\c@definition=\count95
+\c@example=\count96
+\c@appendix=\count97
+) (./Rinton-B9x6.aux)
+\openout1 = `Rinton-B9x6.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[1
+
+]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[2]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[3]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[4]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[5]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[6
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 26.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 26.
+ (./preface.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[7])
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[8] (./Rinton-B9x6.toc)
+\tf@toc=\write3
+\openout3 = `Rinton-B9x6.toc'.
+
+
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[9
+
+] (./chapter1.tex
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[1
+
+]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[2]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[3]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 199.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 199.
+
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[4]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[6]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[7]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[8]
+(fig-1.eps
+)
+) (./appendix.tex
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[9]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[10
+
+]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[11]
+(fig-2.eps
+)
+
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[12]
+Underfull \vbox (badness 6708) has occurred while \output is active []
+
+
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[13
+
+]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[14]) (./reference.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[15
+
+])
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[16] (./index.tex
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+[17
+
+]
+Overfull \vbox (678.10652pt too high) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[18]) (./Rinton-B9x6.aux) ) 
+Here is how much of TeX's memory you used:
+ 803 strings out of 494665
+ 9097 string characters out of 1166477
+ 63110 words of memory out of 3000000
+ 4059 multiletter control sequences out of 15000+50000
+ 9501 words of font info for 33 fonts, out of 3000000 for 9000
+ 669 hyphenation exceptions out of 8191
+ 34i,8n,21p,325b,272s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on Rinton-B9x6.pdf (27 pages).
